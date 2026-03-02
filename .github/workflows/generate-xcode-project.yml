@@ -6,6 +6,8 @@ on:
 jobs:
   generate:
     runs-on: macos-14
+    permissions:
+      contents: write
     
     steps:
       - name: Checkout repository
@@ -25,7 +27,5 @@ jobs:
           git diff --staged --quiet || git commit -m "Generate Xcode project with XcodeGen"
       
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+        run: |
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
