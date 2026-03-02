@@ -48,6 +48,7 @@ jobs:
           -scheme PosturePalPro \
           -destination "platform=iOS Simulator,name=${{ env.IOS_SIMULATOR }},OS=${{ env.IOS_VERSION }}" \
           -configuration Debug \
+          -derivedDataPath ./build/DerivedData \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
@@ -78,58 +79,44 @@ jobs:
           
     - name: Package Simulator Build
       run: |
-        # Find the built .app from the previous build step
-        APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "PosturePalPro.app" -path "*/Debug-iphonesimulator/*" | head -1)
+        # Use the known path from -derivedDataPath flag
+        APP_PATH="./build/DerivedData/Build/Products/Debug-iphonesimulator/PosturePalPro.app"
         
-        if [ -z "$APP_PATH" ]; then
-          echo "❌ Error: PosturePalPro.app not found in DerivedData"
-          echo "Searching all .app files:"
-          find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d
+        if [ ! -d "$APP_PATH" ]; then
+          echo "❌ Error: PosturePalPro.app not found at $APP_PATH"
+          echo "Listing DerivedData structure:"
+          find ./build/DerivedData -type d -name "*.app" || true
           exit 1
         fi
         
         echo "✅ Found app at: $APP_PATH"
         
-        # Verify it's a valid app bundle
-        if [ ! -d "$APP_PATH" ]; then
-          echo "❌ Error: Path exists but is not a directory"
-          exit 1
-        fi
-        
-        # Create build directory and copy the app
-        mkdir -p build
-        echo "📦 Copying app to build directory..."
-        cp -r "$APP_PATH" build/
-        
-        # Verify copy succeeded
-        if [ ! -d "build/PosturePalPro.app" ]; then
-          echo "❌ Error: Failed to copy app to build directory"
-          exit 1
-        fi
-        
         # Get app info for verification
-        APP_SIZE=$(du -sh "build/PosturePalPro.app" | cut -f1)
+        APP_SIZE=$(du -sh "$APP_PATH" | cut -f1)
         echo "📊 App bundle size: $APP_SIZE"
         
+        # Create archive directory
+        mkdir -p artifacts
+        
         # Zip the app bundle
-        cd build
-        echo "🗜️ Creating zip archive..."
-        zip -r PosturePalPro-Simulator.zip PosturePalPro.app
+        cd $(dirname "$APP_PATH")
+        zip -r "$OLDPWD/artifacts/PosturePalPro-Simulator.zip" PosturePalPro.app
+        cd "$OLDPWD"
         
         # Verify zip was created
-        if [ ! -f "PosturePalPro-Simulator.zip" ]; then
+        if [ ! -f "artifacts/PosturePalPro-Simulator.zip" ]; then
           echo "❌ Error: Failed to create zip archive"
           exit 1
         fi
         
-        ZIP_SIZE=$(du -sh PosturePalPro-Simulator.zip | cut -f1)
+        ZIP_SIZE=$(du -sh artifacts/PosturePalPro-Simulator.zip | cut -f1)
         echo "✅ Created PosturePalPro-Simulator.zip ($ZIP_SIZE)"
         
     - name: Upload Simulator Build
       uses: actions/upload-artifact@v4
       with:
         name: PosturePalPro-Simulator-Build
-        path: build/PosturePalPro-Simulator.zip
+        path: artifacts/PosturePalPro-Simulator.zip
         retention-days: 30
         
     - name: Generate Build Report
