@@ -1,0 +1,177 @@
+//
+//  DashboardViewModel.swift
+//  PosturePal
+//
+//  Week 1-3: Enhanced with milestone celebrations and Watch sync
+//
+
+import Foundation
+import CoreData
+import Combine
+
+class DashboardViewModel: ObservableObject {
+    // MARK: - Published Properties
+    
+    @Published var checkIns: [CheckIn] = []
+    @Published var streakData: StreakData = StreakData(currentStreak: 0, longestStreak: 0, totalCheckIns: 0, lastCheckInDate: nil, monthlyConsistency: 0.0)
+    @Published var isCheckingIn: Bool = false
+    
+    // WEEK 2-3: Milestone celebration
+    @Published var showCelebration: Bool = false
+    @Published var celebrationMilestone: Int = 0
+    
+    // MARK: - Private Properties
+    
+    private let persistenceController: PersistenceController
+    private let notificationService: NotificationService
+    private var cancellables = Set<AnyCancellable>()
+    
+    // Known milestones for celebrations
+    private let milestones: [Int] = [7, 14, 30, 50, 100, 365]
+    
+    // MARK: - Initialization
+    
+    init(persistenceController: PersistenceController = .shared,
+         notificationService: NotificationService = .shared) {
+        self.persistenceController = persistenceController
+        self.notificationService = notificationService
+        
+        loadCheckIns()
+        calculateStreak()
+    }
+    
+    // MARK: - Data Loading
+    
+    func loadCheckIns() {
+        let context = persistenceController.container.viewContext
+        let request = CheckIn.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \CheckIn.timestamp, ascending: false)]
+        request.fetchLimit = 100 // Last 100 check-ins
+        
+        do {
+            checkIns = try context.fetch(request)
+            print("✅ Loaded \(checkIns.count) check-ins")
+        } catch {
+            print("❌ Error loading check-ins: \(error)")
+        }
+    }
+    
+    func calculateStreak() {
+        let calculator = StreakCalculator()
+        streakData = calculator.calculate(from: checkIns)
+        print("📊 Current streak: \(streakData.currentStreak) days")
+    }
+    
+    // MARK: - Check-In Action
+    
+    func performCheckIn() {
+        guard !isCheckingIn else { return }
+        
+        isCheckingIn = true
+        
+        // Save to Core Data
+        let context = persistenceController.container.viewContext
+        let checkIn = CheckIn(context: context)
+        checkIn.id = UUID()
+        checkIn.timestamp = Date()
+        checkIn.wasOnTime = true
+        
+        do {
+            try context.save()
+            print("✅ Check-in saved")
+            
+            // Reload data
+            loadCheckIns()
+            let previousStreak = streakData.currentStreak
+            calculateStreak()
+            
+            // WEEK 2-3: Check for milestone
+            checkMilestone(previousStreak: previousStreak, newStreak: streakData.currentStreak)
+            
+            // Reschedule notification
+            notificationService.scheduleNextNotification()
+            
+            // WEEK 2-3: Update Watch
+            PhoneConnectivityManager.shared.sendStreakUpdate()
+            
+            // WEEK 2-3: Update widgets
+            updateWidgetData()
+            
+            // Haptic feedback
+            #if os(iOS)
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.success)
+            #endif
+            
+        } catch {
+            print("❌ Error saving check-in: \(error)")
+        }
+        
+        isCheckingIn = false
+    }
+    
+    // MARK: - WEEK 2-3: Milestone Detection
+    
+    private func checkMilestone(previousStreak: Int, newStreak: Int) {
+        // Check if we just hit a milestone
+        for milestone in milestones {
+            if newStreak >= milestone && previousStreak < milestone {
+                // Milestone reached!
+                celebrationMilestone = milestone
+                showCelebration = true
+                
+                // Extra haptic for milestone
+                #if os(iOS)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    let generator = UINotificationFeedbackGenerator()
+                    generator.notificationOccurred(.success)
+                }
+                #endif
+                
+                print("🎉 Milestone reached: \(milestone) days!")
+                break
+            }
+        }
+    }
+    
+    // MARK: - WEEK 2-3: Widget Data Update
+    
+    private func updateWidgetData() {
+        let sharedDefaults = UserDefaults(suiteName: "group.com.posturepal.app")
+        sharedDefaults?.set(streakData.currentStreak, forKey: "widgetCurrentStreak")
+        sharedDefaults?.set(todayCheckInCount(), forKey: "widgetTodayCheckIns")
+        
+        if let nextReminder = notificationService.nextScheduledNotification {
+            sharedDefaults?.set(nextReminder, forKey: "widgetNextReminder")
+        }
+        
+        // Trigger widget reload
+        #if os(iOS)
+        import WidgetKit
+        WidgetCenter.shared.reloadAllTimelines()
+        #endif
+        
+        print("📱 Widget data updated")
+    }
+    
+    // MARK: - Helper Methods
+    
+    func todayCheckInCount() -> Int {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        
+        return checkIns.filter { checkIn in
+            calendar.isDate(checkIn.timestamp, inSameDayAs: today)
+        }.count
+    }
+    
+    func lastCheckInText() -> String {
+        guard let lastCheckIn = streakData.lastCheckInDate else {
+            return "No check-ins yet"
+        }
+        
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .short
+        return "Last: \(formatter.localizedString(for: lastCheckIn, relativeTo: Date()))"
+    }
+}

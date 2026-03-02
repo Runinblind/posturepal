@@ -1,0 +1,70 @@
+//
+//  PosturePalApp.swift
+//  PosturePal
+//
+//  Created by JARVIS App Dev System
+//  Week 1 Foundation - Main App Entry Point
+//
+
+import SwiftUI
+import UserNotifications
+
+@main
+struct PosturePalApp: App {
+    // Core Data persistence controller
+    @StateObject private var persistenceController = PersistenceController.shared
+    
+    // User settings manager
+    @StateObject private var settingsManager = SettingsManager.shared
+    
+    // Notification service
+    @StateObject private var notificationService = NotificationService.shared
+    
+    init() {
+        // Configure app on launch
+        configureApp()
+    }
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(settingsManager)
+                .environmentObject(notificationService)
+                .onAppear {
+                    requestNotificationPermissions()
+                }
+        }
+    }
+    
+    // MARK: - Configuration
+    
+    private func configureApp() {
+        // Any initial app configuration goes here
+        print("📱 PosturePal launching...")
+    }
+    
+    private func requestNotificationPermissions() {
+        notificationService.requestAuthorization { granted in
+            if granted {
+                print("✅ Notification permissions granted")
+            } else {
+                print("❌ Notification permissions denied")
+            }
+        }
+    }
+}
+
+// MARK: - Content View (Router)
+
+struct ContentView: View {
+    @EnvironmentObject var settingsManager: SettingsManager
+    
+    var body: some View {
+        if settingsManager.settings.onboardingCompleted {
+            DashboardView()
+        } else {
+            OnboardingContainerView()
+        }
+    }
+}
