@@ -76,22 +76,54 @@ jobs:
           CODE_SIGNING_REQUIRED=NO \
           | xcpretty || true
           
-    - name: Build for Archive (Simulator)
-      run: |
-        xcodebuild archive \
-          -project PosturePalPro.xcodeproj \
-          -scheme PosturePalPro \
-          -destination "generic/platform=iOS Simulator" \
-          -archivePath build/PosturePalPro-Simulator.xcarchive \
-          -configuration Debug \
-          CODE_SIGN_IDENTITY="" \
-          CODE_SIGNING_REQUIRED=NO \
-          CODE_SIGNING_ALLOWED=NO
-          
     - name: Package Simulator Build
       run: |
+        # Find the built .app from the previous build step
+        APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "PosturePalPro.app" -path "*/Debug-iphonesimulator/*" | head -1)
+        
+        if [ -z "$APP_PATH" ]; then
+          echo "❌ Error: PosturePalPro.app not found in DerivedData"
+          echo "Searching all .app files:"
+          find ~/Library/Developer/Xcode/DerivedData -name "*.app" -type d
+          exit 1
+        fi
+        
+        echo "✅ Found app at: $APP_PATH"
+        
+        # Verify it's a valid app bundle
+        if [ ! -d "$APP_PATH" ]; then
+          echo "❌ Error: Path exists but is not a directory"
+          exit 1
+        fi
+        
+        # Create build directory and copy the app
+        mkdir -p build
+        echo "📦 Copying app to build directory..."
+        cp -r "$APP_PATH" build/
+        
+        # Verify copy succeeded
+        if [ ! -d "build/PosturePalPro.app" ]; then
+          echo "❌ Error: Failed to copy app to build directory"
+          exit 1
+        fi
+        
+        # Get app info for verification
+        APP_SIZE=$(du -sh "build/PosturePalPro.app" | cut -f1)
+        echo "📊 App bundle size: $APP_SIZE"
+        
+        # Zip the app bundle
         cd build
-        zip -r PosturePalPro-Simulator.zip PosturePalPro-Simulator.xcarchive
+        echo "🗜️ Creating zip archive..."
+        zip -r PosturePalPro-Simulator.zip PosturePalPro.app
+        
+        # Verify zip was created
+        if [ ! -f "PosturePalPro-Simulator.zip" ]; then
+          echo "❌ Error: Failed to create zip archive"
+          exit 1
+        fi
+        
+        ZIP_SIZE=$(du -sh PosturePalPro-Simulator.zip | cut -f1)
+        echo "✅ Created PosturePalPro-Simulator.zip ($ZIP_SIZE)"
         
     - name: Upload Simulator Build
       uses: actions/upload-artifact@v4
