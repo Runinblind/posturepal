@@ -38,7 +38,6 @@
 		A0000201000000000000001 /* PosturePalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000201000000000000001 /* PosturePalWidget.swift */; };
 		A0000202000000000000001 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0000001000000000000001 /* WidgetKit.framework */; };
 		A0000203000000000000001 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0000002000000000000001 /* SwiftUI.framework */; };
-		A0000204000000000000001 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = P0000001000000000000001 /* RevenueCat */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +102,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0000204000000000000001 /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,9 +337,6 @@
 				M0000002000000000000001 /* PBXTargetDependency */,
 			);
 			name = PosturePalPro;
-			packageProductDependencies = (
-				P0000001000000000000001 /* RevenueCat */,
-			);
 			productName = PosturePalPro;
 			productReference = F0000001000000000000001 /* PosturePalPro.app */;
 			productType = "com.apple.product-type.application";
@@ -413,9 +408,6 @@
 			productRefGroup = I0000040000000000000001 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			packageReferences = (
-				Q0000001000000000000001 /* XCRemoteSwiftPackageReference "purchases-ios" */,
-			);
 			targets = (
 				F0000001000000000000001 /* PosturePalPro */,
 				F0000002000000000000001 /* PosturePal Watch */,
@@ -513,26 +505,6 @@
 			targetProxy = D0000002000000000000001 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-
-/* Begin XCRemoteSwiftPackageReference section */
-		Q0000001000000000000001 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		P0000001000000000000001 /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = Q0000001000000000000001 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = RevenueCat;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCBuildConfiguration section */
 		N0000001000000000000001 /* Debug */ = {
