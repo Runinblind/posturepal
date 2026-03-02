@@ -43,36 +43,29 @@ jobs:
         
     - name: Build iOS App
       run: |
-        # Use SYMROOT and OBJROOT for explicit, reliable control
+        # Let xcodebuild use its default DerivedData location - stop fighting it
         xcodebuild clean build \
           -project PosturePalPro.xcodeproj \
           -scheme PosturePalPro \
           -destination "platform=iOS Simulator,name=${{ env.IOS_SIMULATOR }},OS=${{ env.IOS_VERSION }}" \
           -configuration Debug \
-          SYMROOT=./build \
-          OBJROOT=./build/obj \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
           | xcpretty || true
         
         # Debug: Show what was actually built and where
-        echo "📂 Build output structure:"
-        find ./build -name "*.app" -type d || true
-        echo ""
-        echo "📂 Expected location contents:"
-        ls -la ./build/Debug-iphonesimulator/ 2>/dev/null || echo "Directory doesn't exist"
+        echo "📂 Searching for built .app bundles:"
+        find . -name "PosturePalPro.app" -type d 2>/dev/null || echo "No .app found yet"
           
     - name: Build Watch App
       run: |
-        # Use same SYMROOT pattern for consistency
+        # Same approach - let xcodebuild do its thing
         xcodebuild build \
           -project PosturePalPro.xcodeproj \
           -scheme "PosturePal Watch" \
           -destination "platform=watchOS Simulator,name=Apple Watch Series 9 (45mm)" \
           -configuration Debug \
-          SYMROOT=./build \
-          OBJROOT=./build/obj \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
           CODE_SIGNING_ALLOWED=NO \
@@ -91,40 +84,62 @@ jobs:
           
     - name: Package Simulator Build
       run: |
-        # The app should be at ./build/Debug-iphonesimulator/PosturePalPro.app
-        APP_PATH="./build/Debug-iphonesimulator/PosturePalPro.app"
+        echo "🔍 Searching for built .app bundle..."
         
-        if [ ! -d "$APP_PATH" ]; then
-          echo "❌ App not found at $APP_PATH"
+        # Find ANY PosturePalPro.app that was just built
+        APP_PATH=$(find . -name "PosturePalPro.app" -type d -path "*/Debug-iphonesimulator/*" 2>/dev/null | head -1)
+        
+        # If not found with iphonesimulator, try any Debug path
+        if [ -z "$APP_PATH" ]; then
+          echo "⚠️ Not found in Debug-iphonesimulator, trying any Debug path..."
+          APP_PATH=$(find . -name "PosturePalPro.app" -type d -path "*/Debug*" 2>/dev/null | head -1)
+        fi
+        
+        # If STILL not found, try absolutely anywhere
+        if [ -z "$APP_PATH" ]; then
+          echo "⚠️ Searching entire workspace..."
+          APP_PATH=$(find . -name "PosturePalPro.app" -type d 2>/dev/null | head -1)
+        fi
+        
+        # If we STILL can't find it, something is seriously wrong
+        if [ -z "$APP_PATH" ]; then
+          echo "❌ CRITICAL: Cannot find PosturePalPro.app anywhere"
           echo ""
-          echo "📂 Searching for .app bundles:"
-          find ./build -name "*.app" -type d
+          echo "📂 Showing all .app bundles:"
+          find . -type d -name "*.app" 2>/dev/null
           echo ""
-          echo "📂 Build directory structure (top 100 lines):"
-          ls -laR ./build/ | head -100
+          echo "📂 Showing build-related directories:"
+          find . -type d \( -name "build" -o -name "Build" -o -name "DerivedData" \) 2>/dev/null
+          echo ""
+          echo "📂 Top-level contents:"
+          ls -la
           exit 1
         fi
         
         echo "✅ Found app at: $APP_PATH"
-        ls -lh "$APP_PATH"
+        
+        # Get app info
+        APP_SIZE=$(du -sh "$APP_PATH" | cut -f1)
+        echo "📊 App bundle size: $APP_SIZE"
         
         # Create artifacts directory
         mkdir -p artifacts
         
-        # Zip directly from build location
-        echo "🗜️ Creating zip..."
-        cd ./build/Debug-iphonesimulator
-        zip -r "$OLDPWD/artifacts/PosturePalPro-Simulator.zip" PosturePalPro.app
+        # Zip it wherever it is
+        echo "🗜️ Creating zip archive..."
+        cd "$(dirname "$APP_PATH")"
+        zip -r "$OLDPWD/artifacts/PosturePalPro-Simulator.zip" "$(basename "$APP_PATH")"
         cd "$OLDPWD"
         
-        # Verify zip was created
+        # Verify zip exists
         if [ ! -f "artifacts/PosturePalPro-Simulator.zip" ]; then
-          echo "❌ Zip creation failed"
+          echo "❌ Failed to create zip"
           exit 1
         fi
         
         ZIP_SIZE=$(du -sh artifacts/PosturePalPro-Simulator.zip | cut -f1)
-        echo "✅ Created zip: $ZIP_SIZE"
+        echo "✅ Successfully packaged: $ZIP_SIZE"
+        echo "📦 Location: artifacts/PosturePalPro-Simulator.zip"
         
     - name: Upload Simulator Build
       uses: actions/upload-artifact@v4
