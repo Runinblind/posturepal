@@ -1,0 +1,70 @@
+name: PosturePalPro
+
+options:
+  bundleIdPrefix: com.posturepal
+  deploymentTarget:
+    iOS: "16.0"
+    watchOS: "9.0"
+
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios
+    majorVersion: 4.0.0
+
+targets:
+  PosturePalPro:
+    type: application
+    platform: iOS
+    sources:
+      - path: src
+        name: PosturePalPro
+    info:
+      path: PosturePalPro/Info.plist
+    entitlements:
+      path: PosturePalPro.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.posturepal.app
+        INFOPLIST_FILE: PosturePalPro/Info.plist
+        CODE_SIGN_ENTITLEMENTS: PosturePalPro.entitlements
+        TARGETED_DEVICE_FAMILY: "1,2"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    dependencies:
+      - target: PosturePal Watch
+      - target: PosturePalWidget
+      - package: RevenueCat
+
+  PosturePal Watch:
+    type: application.watchapp2
+    platform: watchOS
+    sources:
+      - path: src-watch
+        name: PosturePal Watch
+    info:
+      path: PosturePal Watch/Info.plist
+    entitlements:
+      path: PosturePalWatch.entitlements
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.posturepal.app.watchkitapp
+        INFOPLIST_FILE: PosturePal Watch/Info.plist
+        CODE_SIGN_ENTITLEMENTS: PosturePalWatch.entitlements
+        TARGETED_DEVICE_FAMILY: "4"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SKIP_INSTALL: "NO"
+        ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: "YES"
+
+  PosturePalWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: src-widget
+        name: PosturePalWidget
+    info:
+      path: PosturePalWidget/Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.posturepal.app.widgets
+        INFOPLIST_FILE: PosturePalWidget/Info.plist
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SKIP_INSTALL: "YES"
