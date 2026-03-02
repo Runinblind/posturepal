@@ -3,272 +3,544 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA0001 /* PosturePalProApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0001 /* PosturePalProApp.swift */; };
-		AA0002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0002 /* ContentView.swift */; };
-		AA0003 /* PostureMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0003 /* PostureMonitorView.swift */; };
-		AA0004 /* SessionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0004 /* SessionHistoryView.swift */; };
-		AA0005 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0005 /* SettingsView.swift */; };
-		AA0006 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0006 /* OnboardingView.swift */; };
-		AA0007 /* CalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0007 /* CalibrationView.swift */; };
-		AA0008 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0008 /* StatsView.swift */; };
-		AA0009 /* NotificationSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0009 /* NotificationSettingsView.swift */; };
-		AA0010 /* PostureSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0010 /* PostureSession.swift */; };
-		AA0011 /* PostureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0011 /* PostureData.swift */; };
-		AA0012 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0012 /* UserSettings.swift */; };
-		AA0013 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0013 /* HealthKitManager.swift */; };
-		AA0014 /* PostureDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0014 /* PostureDetectionManager.swift */; };
-		AA0015 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0015 /* NotificationManager.swift */; };
-		AA0016 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0016 /* SessionManager.swift */; };
-		AA0017 /* CalibrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0017 /* CalibrationManager.swift */; };
-		AA0018 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0018 /* HapticManager.swift */; };
-		AA0019 /* PostureClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = BB0019 /* PostureClassifier.mlmodel */; };
-		AA0020 /* SessionDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0020 /* SessionDataManager.swift */; };
-		AA0021 /* PostureChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0021 /* PostureChart.swift */; };
-		AA0022 /* StatsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0022 /* StatsCard.swift */; };
-		AA0023 /* PostureRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0023 /* PostureRingView.swift */; };
-		AA0024 /* SessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0024 /* SessionCard.swift */; };
+		1F9DA5EF6C1B34ED229D1DD5 /* PosturePalWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 325785B5B3E20C5EBDC92A1E /* PosturePalWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		22749E640519DE878A344937 /* PhoneConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A09FC31F31FA99BA8E2831 /* PhoneConnectivityManager.swift */; };
+		2E4E52EAD37FE48BFA6096E4 /* PosturePalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DA1ECC856222DDFD324A8 /* PosturePalWidget.swift */; };
+		30FB8E4C9D8E2F21C9D7CE00 /* README-WEEK1.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CCA2A972B1EB89F565CF66 /* README-WEEK1.md */; };
+		326A657735643FDB7A02E05F /* StreakData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE56F79DBA05C5B38003B7A /* StreakData.swift */; };
+		33BF90943083344DD367B26A /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21BDA2C6866BE2FECC3E50 /* ConfettiView.swift */; };
+		3EF9462A09A2005FC8299B74 /* AnalyticsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A2CC454C107425D5C5912C /* AnalyticsDashboardView.swift */; };
+		40F5186A9B8B46773742C445 /* PosturePalApp.swift.week1.bak in Resources */ = {isa = PBXBuildFile; fileRef = 5B70893C6981CE5F788E1E30 /* PosturePalApp.swift.week1.bak */; };
+		44669239F392A3EFB679227F /* WatchDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16137E6A76424B3D2AFC591C /* WatchDashboardView.swift */; };
+		4713E3930E3322602D0AA07C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577DA299B6F128AD6190C2A6 /* NotificationService.swift */; };
+		49DF29628D6C684CF8FBF32D /* DashboardViewModel.swift.week2-3 in Resources */ = {isa = PBXBuildFile; fileRef = EB8E5DDB5E07426C2E7CE412 /* DashboardViewModel.swift.week2-3 */; };
+		4B79365396FE3B9BA67D8AA7 /* EnhancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589FE389DE257BBD50A0CD78 /* EnhancedSettingsView.swift */; };
+		51EB3E0E7AC5469F43293432 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABFFD35C55FE11E2C5DD497A /* OnboardingContainerView.swift */; };
+		6888A8C5DCFB42E59F3C0D84 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C362B4360682303FB49F8 /* WatchConnectivityManager.swift */; };
+		69CE02E92BF4930ACDB3D72F /* PosturePal Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 466BD14F0EBD007258BD9CB1 /* PosturePal Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		757845B8731C4A56E8F60CAB /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9A5D600BE94F9809B80BF4 /* DashboardView.swift */; };
+		7A5938357E886C953BD4334B /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16AD44C52E9E16E2B26EDEB /* PersistenceController.swift */; };
+		7E172CAB7B810D9B8B80621A /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC17C7DF70E5B9507C86816B /* LocalizationKeys.swift */; };
+		7EED377ED94E5FC19753466D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8F8557C2E8766AB851385D /* SettingsViewModel.swift */; };
+		8DC4D37ABAE3BD8ABE9B479F /* AccessibilityHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0282A506B2B13D1C63A55 /* AccessibilityHelpers.swift */; };
+		8FA49FFDE35A1BDF1778BF16 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C77B567DF6BB1382288DF6 /* Achievement.swift */; };
+		9FF43E9BAC822A535069028A /* WatchDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8D65ECADEF6716DF7D8EE8 /* WatchDashboardViewModel.swift */; };
+		A6BB4B7BE9F9F4645C5EBF8A /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = E538E23F39A97EE9B3E209CC /* RevenueCat */; };
+		AEB8BBA0194FC69AB5E307FF /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2307E3CC8BD31E5C677C4B8F /* PaywallView.swift */; };
+		B3F7CD48B64E2549CFD660A5 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E06064576BC3EE3416FDE /* SubscriptionManager.swift */; };
+		B3FBD199788D26C46B031A52 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB95234C04DB22BC3C9A579 /* DashboardViewModel.swift */; };
+		B5740D006112236063E65F26 /* create_all_files.sh in Resources */ = {isa = PBXBuildFile; fileRef = AF3C62D8344B5CEFF32D8EC6 /* create_all_files.sh */; };
+		B64A2FA39AE1876A11999A9F /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43896FE729EAF2BF45450D40 /* AnalyticsViewModel.swift */; };
+		BB606CE9E2E15BAD4FED5682 /* EnhancedOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4C2B0F38CC99726C231212 /* EnhancedOnboardingView.swift */; };
+		BEE2F147D8848D7580AC68C8 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F652F92356F57BA779EB5F86 /* CheckIn.swift */; };
+		C3B9D4980AC5C2DD1CC0EB1B /* PosturePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E18F1FFCCD5B917A8954AE /* PosturePalApp.swift */; };
+		C5DCF991843FDC75A55E3B9B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD52AB5D7CBB2B2CC8583499 /* SettingsView.swift */; };
+		D2762EF3AFA7D94A97DD92D7 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594544D4247882D72733FBF /* UserSettings.swift */; };
+		DC54545001773E0ACB1B5DD5 /* PosturePalWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1354F0C7CAC425C8E5E24F /* PosturePalWatchApp.swift */; };
+		F4A0B6CF8F88F4835FE04964 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F594CD820E73DDCA089FEF5 /* AchievementsView.swift */; };
+		FB14EAA4967D30447478172D /* AnalyticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6E65D4E4509177C141EB96 /* AnalyticsData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		567DDCA7CD406314A10C37D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E8F2A8E83F85E4E96A38616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F23DB03A67289FB89B5D78;
+			remoteInfo = PosturePalWidget;
+		};
+		821A825743BC3FF8D9E82718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E8F2A8E83F85E4E96A38616 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AFA983D868C723D5048AFEF;
+			remoteInfo = "PosturePal Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		37A5A6DD3CC8358701AD6C08 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				69CE02E92BF4930ACDB3D72F /* PosturePal Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4A89EA0F86673A900322A7B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1F9DA5EF6C1B34ED229D1DD5 /* PosturePalWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		BB0001 /* PosturePalProApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalProApp.swift; sourceTree = "<group>"; };
-		BB0002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		BB0003 /* PostureMonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureMonitorView.swift; sourceTree = "<group>"; };
-		BB0004 /* SessionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHistoryView.swift; sourceTree = "<group>"; };
-		BB0005 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		BB0006 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		BB0007 /* CalibrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationView.swift; sourceTree = "<group>"; };
-		BB0008 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
-		BB0009 /* NotificationSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsView.swift; sourceTree = "<group>"; };
-		BB0010 /* PostureSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureSession.swift; sourceTree = "<group>"; };
-		BB0011 /* PostureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureData.swift; sourceTree = "<group>"; };
-		BB0012 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		BB0013 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		BB0014 /* PostureDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureDetectionManager.swift; sourceTree = "<group>"; };
-		BB0015 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		BB0016 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		BB0017 /* CalibrationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationManager.swift; sourceTree = "<group>"; };
-		BB0018 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
-		BB0019 /* PostureClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PostureClassifier.mlmodel; sourceTree = "<group>"; };
-		BB0020 /* SessionDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDataManager.swift; sourceTree = "<group>"; };
-		BB0021 /* PostureChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureChart.swift; sourceTree = "<group>"; };
-		BB0022 /* StatsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCard.swift; sourceTree = "<group>"; };
-		BB0023 /* PostureRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureRingView.swift; sourceTree = "<group>"; };
-		BB0024 /* SessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCard.swift; sourceTree = "<group>"; };
-		CC0001 /* PosturePalPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosturePalPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD0001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DD0002 /* PosturePalPro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PosturePalPro.entitlements; sourceTree = "<group>"; };
+		02C77B567DF6BB1382288DF6 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		16137E6A76424B3D2AFC591C /* WatchDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDashboardView.swift; sourceTree = "<group>"; };
+		1D4C2B0F38CC99726C231212 /* EnhancedOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedOnboardingView.swift; sourceTree = "<group>"; };
+		1F594CD820E73DDCA089FEF5 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		2307E3CC8BD31E5C677C4B8F /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		2D8D65ECADEF6716DF7D8EE8 /* WatchDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDashboardViewModel.swift; sourceTree = "<group>"; };
+		325785B5B3E20C5EBDC92A1E /* PosturePalWidget.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PosturePalWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		39B5A9DFC81AC9B1120BAA07 /* PosturePalPro.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PosturePalPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43896FE729EAF2BF45450D40 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		466BD14F0EBD007258BD9CB1 /* PosturePal Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PosturePal Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		577DA299B6F128AD6190C2A6 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		589FE389DE257BBD50A0CD78 /* EnhancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedSettingsView.swift; sourceTree = "<group>"; };
+		5B70893C6981CE5F788E1E30 /* PosturePalApp.swift.week1.bak */ = {isa = PBXFileReference; path = PosturePalApp.swift.week1.bak; sourceTree = "<group>"; };
+		5FE56F79DBA05C5B38003B7A /* StreakData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakData.swift; sourceTree = "<group>"; };
+		6D8F8557C2E8766AB851385D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		7C6E65D4E4509177C141EB96 /* AnalyticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsData.swift; sourceTree = "<group>"; };
+		848DA1ECC856222DDFD324A8 /* PosturePalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalWidget.swift; sourceTree = "<group>"; };
+		8C1354F0C7CAC425C8E5E24F /* PosturePalWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalWatchApp.swift; sourceTree = "<group>"; };
+		9594544D4247882D72733FBF /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		9B21BDA2C6866BE2FECC3E50 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		A1A2CC454C107425D5C5912C /* AnalyticsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDashboardView.swift; sourceTree = "<group>"; };
+		ABFFD35C55FE11E2C5DD497A /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		AF3C62D8344B5CEFF32D8EC6 /* create_all_files.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = create_all_files.sh; sourceTree = "<group>"; };
+		C26E06064576BC3EE3416FDE /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		C2A09FC31F31FA99BA8E2831 /* PhoneConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityManager.swift; sourceTree = "<group>"; };
+		D5CCA2A972B1EB89F565CF66 /* README-WEEK1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-WEEK1.md"; sourceTree = "<group>"; };
+		DA4C362B4360682303FB49F8 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		DC17C7DF70E5B9507C86816B /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
+		DFB95234C04DB22BC3C9A579 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		EB8E5DDB5E07426C2E7CE412 /* DashboardViewModel.swift.week2-3 */ = {isa = PBXFileReference; path = "DashboardViewModel.swift.week2-3"; sourceTree = "<group>"; };
+		ED9A5D600BE94F9809B80BF4 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		F16AD44C52E9E16E2B26EDEB /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		F652F92356F57BA779EB5F86 /* CheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn.swift; sourceTree = "<group>"; };
+		F7B0282A506B2B13D1C63A55 /* AccessibilityHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelpers.swift; sourceTree = "<group>"; };
+		F8E18F1FFCCD5B917A8954AE /* PosturePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalApp.swift; sourceTree = "<group>"; };
+		FD52AB5D7CBB2B2CC8583499 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EE0001 /* Frameworks */ = {
+		B54CD290E39CBE9A31B3405C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6BB4B7BE9F9F4645C5EBF8A /* RevenueCat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF0001 = {
+		0A8C456670563CAE3712272A /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				FF0002 /* PosturePalPro */,
-				FF0003 /* Products */,
+				DC17C7DF70E5B9507C86816B /* LocalizationKeys.swift */,
 			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
-		FF0002 /* PosturePalPro */ = {
+		0FD09C68DCD963F5DB09DCBA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD0001 /* Info.plist */,
-				DD0002 /* PosturePalPro.entitlements */,
-				FF0004 /* App */,
-				FF0005 /* Views */,
-				FF0006 /* Models */,
-				FF0007 /* Managers */,
-				FF0008 /* Components */,
-			);
-			path = PosturePalPro;
-			sourceTree = "<group>";
-		};
-		FF0003 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC0001 /* PosturePalPro.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FF0004 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				BB0001 /* PosturePalProApp.swift */,
-				BB0002 /* ContentView.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		FF0005 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BB0003 /* PostureMonitorView.swift */,
-				BB0004 /* SessionHistoryView.swift */,
-				BB0005 /* SettingsView.swift */,
-				BB0006 /* OnboardingView.swift */,
-				BB0007 /* CalibrationView.swift */,
-				BB0008 /* StatsView.swift */,
-				BB0009 /* NotificationSettingsView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		FF0006 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BB0010 /* PostureSession.swift */,
-				BB0011 /* PostureData.swift */,
-				BB0012 /* UserSettings.swift */,
-				BB0019 /* PostureClassifier.mlmodel */,
+				02C77B567DF6BB1382288DF6 /* Achievement.swift */,
+				7C6E65D4E4509177C141EB96 /* AnalyticsData.swift */,
+				F652F92356F57BA779EB5F86 /* CheckIn.swift */,
+				5FE56F79DBA05C5B38003B7A /* StreakData.swift */,
+				9594544D4247882D72733FBF /* UserSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		FF0007 /* Managers */ = {
+		1783A443B693D3569B0D0FEA /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
-				BB0013 /* HealthKitManager.swift */,
-				BB0014 /* PostureDetectionManager.swift */,
-				BB0015 /* NotificationManager.swift */,
-				BB0016 /* SessionManager.swift */,
-				BB0017 /* CalibrationManager.swift */,
-				BB0018 /* HapticManager.swift */,
-				BB0020 /* SessionDataManager.swift */,
+				C26E06064576BC3EE3416FDE /* SubscriptionManager.swift */,
 			);
-			path = Managers;
+			path = Subscription;
 			sourceTree = "<group>";
 		};
-		FF0008 /* Components */ = {
+		30F94074C3A216BC45EB67D4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BB0021 /* PostureChart.swift */,
-				BB0022 /* StatsCard.swift */,
-				BB0023 /* PostureRingView.swift */,
-				BB0024 /* SessionCard.swift */,
+				ED9A5D600BE94F9809B80BF4 /* DashboardView.swift */,
 			);
-			path = Components;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		448D52FCF135ADA92AD54C56 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				2307E3CC8BD31E5C677C4B8F /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		467EAA917E6CB370C31D6508 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				466BD14F0EBD007258BD9CB1 /* PosturePal Watch.app */,
+				39B5A9DFC81AC9B1120BAA07 /* PosturePalPro.app */,
+				325785B5B3E20C5EBDC92A1E /* PosturePalWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		492DF29A9E633ABE914BAD7F /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				A1A2CC454C107425D5C5912C /* AnalyticsDashboardView.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		4CBD957ACAD2CE9BAE997EB9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				577DA299B6F128AD6190C2A6 /* NotificationService.swift */,
+				F16AD44C52E9E16E2B26EDEB /* PersistenceController.swift */,
+				C2A09FC31F31FA99BA8E2831 /* PhoneConnectivityManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		527ACD79C1872E884F885597 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAE95DFC0D3DBF1C3877694C /* Achievements */,
+				492DF29A9E633ABE914BAD7F /* Analytics */,
+				AB598C28C709947C09507DD3 /* Animations */,
+				30F94074C3A216BC45EB67D4 /* Home */,
+				F61F3973796DAA908FA50ABB /* Onboarding */,
+				448D52FCF135ADA92AD54C56 /* Paywall */,
+				BB363779CD9B31005392B053 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6865DA68CAD088051F92A7C4 = {
+			isa = PBXGroup;
+			children = (
+				D0E38021752A75397ADFC780 /* PosturePal Watch */,
+				84DE085AF492817BF2636CFC /* PosturePalPro */,
+				A73A0F48849E832B503DC77E /* PosturePalWidget */,
+				467EAA917E6CB370C31D6508 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74DA77BC0BE86788313B04C1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				43896FE729EAF2BF45450D40 /* AnalyticsViewModel.swift */,
+				DFB95234C04DB22BC3C9A579 /* DashboardViewModel.swift */,
+				EB8E5DDB5E07426C2E7CE412 /* DashboardViewModel.swift.week2-3 */,
+				6D8F8557C2E8766AB851385D /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84DE085AF492817BF2636CFC /* PosturePalPro */ = {
+			isa = PBXGroup;
+			children = (
+				AF3C62D8344B5CEFF32D8EC6 /* create_all_files.sh */,
+				F8E18F1FFCCD5B917A8954AE /* PosturePalApp.swift */,
+				5B70893C6981CE5F788E1E30 /* PosturePalApp.swift.week1.bak */,
+				D5CCA2A972B1EB89F565CF66 /* README-WEEK1.md */,
+				0A8C456670563CAE3712272A /* Localization */,
+				0FD09C68DCD963F5DB09DCBA /* Models */,
+				4CBD957ACAD2CE9BAE997EB9 /* Services */,
+				1783A443B693D3569B0D0FEA /* Subscription */,
+				A7E8AF6D1330D9A41D301ED2 /* Utilities */,
+				74DA77BC0BE86788313B04C1 /* ViewModels */,
+				527ACD79C1872E884F885597 /* Views */,
+			);
+			name = PosturePalPro;
+			path = src;
+			sourceTree = "<group>";
+		};
+		A73A0F48849E832B503DC77E /* PosturePalWidget */ = {
+			isa = PBXGroup;
+			children = (
+				848DA1ECC856222DDFD324A8 /* PosturePalWidget.swift */,
+			);
+			name = PosturePalWidget;
+			path = "src-widget";
+			sourceTree = "<group>";
+		};
+		A7E8AF6D1330D9A41D301ED2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F7B0282A506B2B13D1C63A55 /* AccessibilityHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		AAE95DFC0D3DBF1C3877694C /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				1F594CD820E73DDCA089FEF5 /* AchievementsView.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		AB598C28C709947C09507DD3 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				9B21BDA2C6866BE2FECC3E50 /* ConfettiView.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		BB363779CD9B31005392B053 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				589FE389DE257BBD50A0CD78 /* EnhancedSettingsView.swift */,
+				FD52AB5D7CBB2B2CC8583499 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		D0E38021752A75397ADFC780 /* PosturePal Watch */ = {
+			isa = PBXGroup;
+			children = (
+				8C1354F0C7CAC425C8E5E24F /* PosturePalWatchApp.swift */,
+				DA4C362B4360682303FB49F8 /* WatchConnectivityManager.swift */,
+				16137E6A76424B3D2AFC591C /* WatchDashboardView.swift */,
+				2D8D65ECADEF6716DF7D8EE8 /* WatchDashboardViewModel.swift */,
+			);
+			name = "PosturePal Watch";
+			path = "src-watch";
+			sourceTree = "<group>";
+		};
+		F61F3973796DAA908FA50ABB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				1D4C2B0F38CC99726C231212 /* EnhancedOnboardingView.swift */,
+				ABFFD35C55FE11E2C5DD497A /* OnboardingContainerView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		GG0001 /* PosturePalPro */ = {
+		22F23DB03A67289FB89B5D78 /* PosturePalWidget */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = HH0001 /* Build configuration list for PBXNativeTarget "PosturePalPro" */;
+			buildConfigurationList = A44F109762A2D5E94B32E971 /* Build configuration list for PBXNativeTarget "PosturePalWidget" */;
 			buildPhases = (
-				EE0002 /* Sources */,
-				EE0001 /* Frameworks */,
-				EE0003 /* Resources */,
+				28387CA22CB8836FA0FD2238 /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
+			name = PosturePalWidget;
+			packageProductDependencies = (
+			);
+			productName = PosturePalWidget;
+			productReference = 325785B5B3E20C5EBDC92A1E /* PosturePalWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		6AFA983D868C723D5048AFEF /* PosturePal Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 147EFF832F14F22C96261A9A /* Build configuration list for PBXNativeTarget "PosturePal Watch" */;
+			buildPhases = (
+				CC524E45A17AD22F9D0833F4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PosturePal Watch";
+			packageProductDependencies = (
+			);
+			productName = "PosturePal Watch";
+			productReference = 466BD14F0EBD007258BD9CB1 /* PosturePal Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CCF3FB9FA93C320EC91D9F7A /* PosturePalPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3DE53684BC817FC9917E75D /* Build configuration list for PBXNativeTarget "PosturePalPro" */;
+			buildPhases = (
+				D434D504029D9BF67F83FF40 /* Sources */,
+				CBEFC29874DA2F36EE28BD51 /* Resources */,
+				B54CD290E39CBE9A31B3405C /* Frameworks */,
+				C4A89EA0F86673A900322A7B /* Embed Foundation Extensions */,
+				37A5A6DD3CC8358701AD6C08 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				858B17EC42849D28523191FA /* PBXTargetDependency */,
+				64D65310BE76AB986B5FF9FA /* PBXTargetDependency */,
+			);
 			name = PosturePalPro;
+			packageProductDependencies = (
+				E538E23F39A97EE9B3E209CC /* RevenueCat */,
+			);
 			productName = PosturePalPro;
-			productReference = CC0001 /* PosturePalPro.app */;
+			productReference = 39B5A9DFC81AC9B1120BAA07 /* PosturePalPro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		II0001 /* Project object */ = {
+		8E8F2A8E83F85E4E96A38616 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
-				TargetAttributes = {
-					GG0001 = {
-						CreatedOnToolsVersion = 15.0;
-					};
-				};
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
 			};
-			buildConfigurationList = HH0002 /* Build configuration list for PBXProject "PosturePalPro" */;
+			buildConfigurationList = 71DFE62EDAD5C1985392E3C1 /* Build configuration list for PBXProject "PosturePalPro" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
-			mainGroup = FF0001;
-			productRefGroup = FF0003 /* Products */;
+			mainGroup = 6865DA68CAD088051F92A7C4;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				16D4D9C7F312624DFBA18552 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+			);
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				GG0001 /* PosturePalPro */,
+				6AFA983D868C723D5048AFEF /* PosturePal Watch */,
+				CCF3FB9FA93C320EC91D9F7A /* PosturePalPro */,
+				22F23DB03A67289FB89B5D78 /* PosturePalWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EE0003 /* Resources */ = {
+		CBEFC29874DA2F36EE28BD51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49DF29628D6C684CF8FBF32D /* DashboardViewModel.swift.week2-3 in Resources */,
+				40F5186A9B8B46773742C445 /* PosturePalApp.swift.week1.bak in Resources */,
+				30FB8E4C9D8E2F21C9D7CE00 /* README-WEEK1.md in Resources */,
+				B5740D006112236063E65F26 /* create_all_files.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EE0002 /* Sources */ = {
+		28387CA22CB8836FA0FD2238 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0001 /* PosturePalProApp.swift in Sources */,
-				AA0002 /* ContentView.swift in Sources */,
-				AA0003 /* PostureMonitorView.swift in Sources */,
-				AA0004 /* SessionHistoryView.swift in Sources */,
-				AA0005 /* SettingsView.swift in Sources */,
-				AA0006 /* OnboardingView.swift in Sources */,
-				AA0007 /* CalibrationView.swift in Sources */,
-				AA0008 /* StatsView.swift in Sources */,
-				AA0009 /* NotificationSettingsView.swift in Sources */,
-				AA0010 /* PostureSession.swift in Sources */,
-				AA0011 /* PostureData.swift in Sources */,
-				AA0012 /* UserSettings.swift in Sources */,
-				AA0013 /* HealthKitManager.swift in Sources */,
-				AA0014 /* PostureDetectionManager.swift in Sources */,
-				AA0015 /* NotificationManager.swift in Sources */,
-				AA0016 /* SessionManager.swift in Sources */,
-				AA0017 /* CalibrationManager.swift in Sources */,
-				AA0018 /* HapticManager.swift in Sources */,
-				AA0019 /* PostureClassifier.mlmodel in Sources */,
-				AA0020 /* SessionDataManager.swift in Sources */,
-				AA0021 /* PostureChart.swift in Sources */,
-				AA0022 /* StatsCard.swift in Sources */,
-				AA0023 /* PostureRingView.swift in Sources */,
-				AA0024 /* SessionCard.swift in Sources */,
+				2E4E52EAD37FE48BFA6096E4 /* PosturePalWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC524E45A17AD22F9D0833F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC54545001773E0ACB1B5DD5 /* PosturePalWatchApp.swift in Sources */,
+				6888A8C5DCFB42E59F3C0D84 /* WatchConnectivityManager.swift in Sources */,
+				44669239F392A3EFB679227F /* WatchDashboardView.swift in Sources */,
+				9FF43E9BAC822A535069028A /* WatchDashboardViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D434D504029D9BF67F83FF40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC4D37ABAE3BD8ABE9B479F /* AccessibilityHelpers.swift in Sources */,
+				8FA49FFDE35A1BDF1778BF16 /* Achievement.swift in Sources */,
+				F4A0B6CF8F88F4835FE04964 /* AchievementsView.swift in Sources */,
+				3EF9462A09A2005FC8299B74 /* AnalyticsDashboardView.swift in Sources */,
+				FB14EAA4967D30447478172D /* AnalyticsData.swift in Sources */,
+				B64A2FA39AE1876A11999A9F /* AnalyticsViewModel.swift in Sources */,
+				BEE2F147D8848D7580AC68C8 /* CheckIn.swift in Sources */,
+				33BF90943083344DD367B26A /* ConfettiView.swift in Sources */,
+				757845B8731C4A56E8F60CAB /* DashboardView.swift in Sources */,
+				B3FBD199788D26C46B031A52 /* DashboardViewModel.swift in Sources */,
+				BB606CE9E2E15BAD4FED5682 /* EnhancedOnboardingView.swift in Sources */,
+				4B79365396FE3B9BA67D8AA7 /* EnhancedSettingsView.swift in Sources */,
+				7E172CAB7B810D9B8B80621A /* LocalizationKeys.swift in Sources */,
+				4713E3930E3322602D0AA07C /* NotificationService.swift in Sources */,
+				51EB3E0E7AC5469F43293432 /* OnboardingContainerView.swift in Sources */,
+				AEB8BBA0194FC69AB5E307FF /* PaywallView.swift in Sources */,
+				7A5938357E886C953BD4334B /* PersistenceController.swift in Sources */,
+				22749E640519DE878A344937 /* PhoneConnectivityManager.swift in Sources */,
+				C3B9D4980AC5C2DD1CC0EB1B /* PosturePalApp.swift in Sources */,
+				C5DCF991843FDC75A55E3B9B /* SettingsView.swift in Sources */,
+				7EED377ED94E5FC19753466D /* SettingsViewModel.swift in Sources */,
+				326A657735643FDB7A02E05F /* StreakData.swift in Sources */,
+				B3F7CD48B64E2549CFD660A5 /* SubscriptionManager.swift in Sources */,
+				D2762EF3AFA7D94A97DD92D7 /* UserSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		64D65310BE76AB986B5FF9FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F23DB03A67289FB89B5D78 /* PosturePalWidget */;
+			targetProxy = 567DDCA7CD406314A10C37D3 /* PBXContainerItemProxy */;
+		};
+		858B17EC42849D28523191FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AFA983D868C723D5048AFEF /* PosturePal Watch */;
+			targetProxy = 821A825743BC3FF8D9E82718 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		JJ0001 /* Debug */ = {
+		11F33BCB2736A7429ADF65A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalWatch.entitlements;
+				INFOPLIST_FILE = "PosturePal Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		2E9F91254776308E89260B71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalPro.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = PosturePalPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3D9AB3F9D668278A4929F18F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -298,14 +570,13 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -313,25 +584,73 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
-		JJ0002 /* Release */ = {
+		892C419F2B53CBE02D7488E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PosturePalWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.widgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E0BB3B6D7632C988AC261E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalWatch.entitlements;
+				INFOPLIST_FILE = "PosturePal Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.watchkitapp;
+				SDKROOT = watchos;
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		EC35958255497F619E394028 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalPro.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = PosturePalPro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC5BD6F5BEBB67C174657340 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -361,8 +680,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -370,114 +688,92 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
-				VALIDATE_PRODUCT = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
-		KK0001 /* Debug */ = {
+		FFD2B66D5CB7F6A729182620 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PosturePalPro/PosturePalPro.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = PosturePalPro/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "PosturePal Pro uses the camera to analyze your posture in real-time.";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "PosturePal Pro would like to share posture data with HealthKit.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "PosturePal Pro would like to update posture data in HealthKit.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_FILE = PosturePalWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.pro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.widgets;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		KK0002 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PosturePalPro/PosturePalPro.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = PosturePalPro/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "PosturePal Pro uses the camera to analyze your posture in real-time.";
-				INFOPLIST_KEY_NSHealthShareUsageDescription = "PosturePal Pro would like to share posture data with HealthKit.";
-				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "PosturePal Pro would like to update posture data in HealthKit.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.pro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		HH0001 /* Build configuration list for PBXNativeTarget "PosturePalPro" */ = {
+		147EFF832F14F22C96261A9A /* Build configuration list for PBXNativeTarget "PosturePal Watch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				KK0001 /* Debug */,
-				KK0002 /* Release */,
+				E0BB3B6D7632C988AC261E79 /* Debug */,
+				11F33BCB2736A7429ADF65A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		HH0002 /* Build configuration list for PBXProject "PosturePalPro" */ = {
+		71DFE62EDAD5C1985392E3C1 /* Build configuration list for PBXProject "PosturePalPro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				JJ0001 /* Debug */,
-				JJ0002 /* Release */,
+				3D9AB3F9D668278A4929F18F /* Debug */,
+				EC5BD6F5BEBB67C174657340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
+		};
+		A44F109762A2D5E94B32E971 /* Build configuration list for PBXNativeTarget "PosturePalWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFD2B66D5CB7F6A729182620 /* Debug */,
+				892C419F2B53CBE02D7488E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B3DE53684BC817FC9917E75D /* Build configuration list for PBXNativeTarget "PosturePalPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9F91254776308E89260B71 /* Debug */,
+				EC35958255497F619E394028 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		16D4D9C7F312624DFBA18552 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E538E23F39A97EE9B3E209CC /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16D4D9C7F312624DFBA18552 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = II0001 /* Project object */;
+	rootObject = 8E8F2A8E83F85E4E96A38616 /* Project object */;
 }
