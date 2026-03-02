@@ -1,0 +1,39 @@
+Fix Xcode project configuration - Correct Info.plist paths and add entitlements
+
+PROBLEM:
+- GitHub Actions "Build iOS App" step was failing
+- Errors were hidden by "|| true" in the workflow
+- Build was failing due to missing/incorrectly referenced files
+
+ROOT CAUSES:
+1. Info.plist files were referenced with incorrect paths in project.pbxproj
+   - Referenced: Info.plist, Watch-Info.plist, Widget-Info.plist (project root)
+   - Actual locations: PosturePalPro/Info.plist, PosturePal Watch/Info.plist, PosturePalWidget/Info.plist
+
+2. Entitlements files were referenced but didn't exist:
+   - PosturePalPro.entitlements - MISSING
+   - PosturePalWatch.entitlements - MISSING
+
+FIXES:
+1. Created missing entitlements files:
+   - PosturePalPro.entitlements (with app groups + time-sensitive notifications)
+   - PosturePalWatch.entitlements (with app groups for data sharing)
+
+2. Updated project.pbxproj file references:
+   - Fixed PBXFileReference paths for all 3 Info.plist files
+   - Fixed INFOPLIST_FILE build settings for all 6 configurations (Debug/Release for 3 targets)
+
+VERIFICATION:
+✓ All 5 required files now exist on disk
+✓ All project.pbxproj paths point to correct locations
+✓ File structure is balanced (braces/brackets validated)
+✓ Build settings reference correct Info.plist paths
+
+EXPECTED RESULT:
+The GitHub Actions workflow should now build successfully because Xcode can locate all required configuration files.
+
+Files changed:
+- PosturePalPro.xcodeproj/project.pbxproj (updated file paths)
+- PosturePalPro.entitlements (created)
+- PosturePalWatch.entitlements (created)
+- XCODE_PROJECT_FIXES.md (documentation)
