@@ -1,0 +1,847 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A0000001000000000000001 /* PosturePalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000001000000000000001 /* PosturePalApp.swift */; };
+		A0000002000000000000001 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000002000000000000001 /* Achievement.swift */; };
+		A0000003000000000000001 /* AnalyticsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000003000000000000001 /* AnalyticsData.swift */; };
+		A0000004000000000000001 /* CheckIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000004000000000000001 /* CheckIn.swift */; };
+		A0000005000000000000001 /* StreakData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000005000000000000001 /* StreakData.swift */; };
+		A0000006000000000000001 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000006000000000000001 /* UserSettings.swift */; };
+		A0000007000000000000001 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000007000000000000001 /* NotificationService.swift */; };
+		A0000008000000000000001 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000008000000000000001 /* PersistenceController.swift */; };
+		A0000009000000000000001 /* PhoneConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000009000000000000001 /* PhoneConnectivityManager.swift */; };
+		A0000010000000000000001 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000010000000000000001 /* SubscriptionManager.swift */; };
+		A0000011000000000000001 /* AccessibilityHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000011000000000000001 /* AccessibilityHelpers.swift */; };
+		A0000012000000000000001 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000012000000000000001 /* AnalyticsViewModel.swift */; };
+		A0000013000000000000001 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000013000000000000001 /* DashboardViewModel.swift */; };
+		A0000014000000000000001 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000014000000000000001 /* SettingsViewModel.swift */; };
+		A0000015000000000000001 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000015000000000000001 /* AchievementsView.swift */; };
+		A0000016000000000000001 /* AnalyticsDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000016000000000000001 /* AnalyticsDashboardView.swift */; };
+		A0000017000000000000001 /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000017000000000000001 /* ConfettiView.swift */; };
+		A0000018000000000000001 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000018000000000000001 /* DashboardView.swift */; };
+		A0000019000000000000001 /* EnhancedOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000019000000000000001 /* EnhancedOnboardingView.swift */; };
+		A0000020000000000000001 /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000020000000000000001 /* OnboardingContainerView.swift */; };
+		A0000021000000000000001 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000021000000000000001 /* PaywallView.swift */; };
+		A0000022000000000000001 /* EnhancedSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000022000000000000001 /* EnhancedSettingsView.swift */; };
+		A0000023000000000000001 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000023000000000000001 /* SettingsView.swift */; };
+		A0000024000000000000001 /* LocalizationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000024000000000000001 /* LocalizationKeys.swift */; };
+		A0000101000000000000001 /* PosturePalWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000101000000000000001 /* PosturePalWatchApp.swift */; };
+		A0000102000000000000001 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000102000000000000001 /* WatchConnectivityManager.swift */; };
+		A0000103000000000000001 /* WatchDashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000103000000000000001 /* WatchDashboardViewModel.swift */; };
+		A0000104000000000000001 /* WatchDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000104000000000000001 /* WatchDashboardView.swift */; };
+		A0000201000000000000001 /* PosturePalWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0000201000000000000001 /* PosturePalWidget.swift */; };
+		A0000202000000000000001 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0000001000000000000001 /* WidgetKit.framework */; };
+		A0000203000000000000001 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0000002000000000000001 /* SwiftUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0000001000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0000001000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0000002000000000000001;
+			remoteInfo = "PosturePal Watch";
+		};
+		D0000002000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0000001000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0000003000000000000001;
+			remoteInfo = "PosturePal Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0000001000000000000001 /* PosturePalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalApp.swift; sourceTree = "<group>"; };
+		B0000002000000000000001 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		B0000003000000000000001 /* AnalyticsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsData.swift; sourceTree = "<group>"; };
+		B0000004000000000000001 /* CheckIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIn.swift; sourceTree = "<group>"; };
+		B0000005000000000000001 /* StreakData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakData.swift; sourceTree = "<group>"; };
+		B0000006000000000000001 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		B0000007000000000000001 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B0000008000000000000001 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		B0000009000000000000001 /* PhoneConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneConnectivityManager.swift; sourceTree = "<group>"; };
+		B0000010000000000000001 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		B0000011000000000000001 /* AccessibilityHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityHelpers.swift; sourceTree = "<group>"; };
+		B0000012000000000000001 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		B0000013000000000000001 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		B0000014000000000000001 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		B0000015000000000000001 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		B0000016000000000000001 /* AnalyticsDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDashboardView.swift; sourceTree = "<group>"; };
+		B0000017000000000000001 /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		B0000018000000000000001 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B0000019000000000000001 /* EnhancedOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedOnboardingView.swift; sourceTree = "<group>"; };
+		B0000020000000000000001 /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		B0000021000000000000001 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		B0000022000000000000001 /* EnhancedSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedSettingsView.swift; sourceTree = "<group>"; };
+		B0000023000000000000001 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B0000024000000000000001 /* LocalizationKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationKeys.swift; sourceTree = "<group>"; };
+		B0000101000000000000001 /* PosturePalWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalWatchApp.swift; sourceTree = "<group>"; };
+		B0000102000000000000001 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		B0000103000000000000001 /* WatchDashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDashboardViewModel.swift; sourceTree = "<group>"; };
+		B0000104000000000000001 /* WatchDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchDashboardView.swift; sourceTree = "<group>"; };
+		B0000201000000000000001 /* PosturePalWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturePalWidget.swift; sourceTree = "<group>"; };
+		C0000001000000000000001 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C0000002000000000000001 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F0000001000000000000001 /* PosturePalPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosturePalPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0000002000000000000001 /* PosturePal Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PosturePal Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0000003000000000000001 /* PosturePalWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PosturePalWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		G0000001000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		G0000002000000000000001 /* Watch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Watch-Info.plist"; sourceTree = "<group>"; };
+		G0000003000000000000001 /* Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Widget-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		H0000001000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		H0000002000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		H0000003000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000202000000000000001 /* WidgetKit.framework in Frameworks */,
+				A0000203000000000000001 /* SwiftUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		I0000001000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				I0000002000000000000001 /* src */,
+				I0000020000000000000001 /* src-watch */,
+				I0000030000000000000001 /* src-widget */,
+				I0000040000000000000001 /* Products */,
+				I0000050000000000000001 /* Frameworks */,
+				G0000001000000000000001 /* Info.plist */,
+				G0000002000000000000001 /* Watch-Info.plist */,
+				G0000003000000000000001 /* Widget-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		I0000002000000000000001 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B0000001000000000000001 /* PosturePalApp.swift */,
+				I0000003000000000000001 /* Models */,
+				I0000004000000000000001 /* Services */,
+				I0000005000000000000001 /* Subscription */,
+				I0000006000000000000001 /* Utilities */,
+				I0000007000000000000001 /* ViewModels */,
+				I0000008000000000000001 /* Views */,
+				I0000019000000000000001 /* Localization */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		I0000003000000000000001 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0000002000000000000001 /* Achievement.swift */,
+				B0000003000000000000001 /* AnalyticsData.swift */,
+				B0000004000000000000001 /* CheckIn.swift */,
+				B0000005000000000000001 /* StreakData.swift */,
+				B0000006000000000000001 /* UserSettings.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		I0000004000000000000001 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0000007000000000000001 /* NotificationService.swift */,
+				B0000008000000000000001 /* PersistenceController.swift */,
+				B0000009000000000000001 /* PhoneConnectivityManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		I0000005000000000000001 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				B0000010000000000000001 /* SubscriptionManager.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		I0000006000000000000001 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0000011000000000000001 /* AccessibilityHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		I0000007000000000000001 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B0000012000000000000001 /* AnalyticsViewModel.swift */,
+				B0000013000000000000001 /* DashboardViewModel.swift */,
+				B0000014000000000000001 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		I0000008000000000000001 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				I0000009000000000000001 /* Achievements */,
+				I0000010000000000000001 /* Analytics */,
+				I0000011000000000000001 /* Animations */,
+				I0000012000000000000001 /* Home */,
+				I0000013000000000000001 /* Onboarding */,
+				I0000014000000000000001 /* Paywall */,
+				I0000015000000000000001 /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		I0000009000000000000001 /* Achievements */ = {
+			isa = PBXGroup;
+			children = (
+				B0000015000000000000001 /* AchievementsView.swift */,
+			);
+			path = Achievements;
+			sourceTree = "<group>";
+		};
+		I0000010000000000000001 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				B0000016000000000000001 /* AnalyticsDashboardView.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		I0000011000000000000001 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B0000017000000000000001 /* ConfettiView.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		I0000012000000000000001 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B0000018000000000000001 /* DashboardView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		I0000013000000000000001 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B0000019000000000000001 /* EnhancedOnboardingView.swift */,
+				B0000020000000000000001 /* OnboardingContainerView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		I0000014000000000000001 /* Paywall */ = {
+			isa = PBXGroup;
+			children = (
+				B0000021000000000000001 /* PaywallView.swift */,
+			);
+			path = Paywall;
+			sourceTree = "<group>";
+		};
+		I0000015000000000000001 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B0000022000000000000001 /* EnhancedSettingsView.swift */,
+				B0000023000000000000001 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		I0000019000000000000001 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B0000024000000000000001 /* LocalizationKeys.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		I0000020000000000000001 /* src-watch */ = {
+			isa = PBXGroup;
+			children = (
+				B0000101000000000000001 /* PosturePalWatchApp.swift */,
+				B0000102000000000000001 /* WatchConnectivityManager.swift */,
+				B0000103000000000000001 /* WatchDashboardViewModel.swift */,
+				B0000104000000000000001 /* WatchDashboardView.swift */,
+			);
+			path = "src-watch";
+			sourceTree = "<group>";
+		};
+		I0000030000000000000001 /* src-widget */ = {
+			isa = PBXGroup;
+			children = (
+				B0000201000000000000001 /* PosturePalWidget.swift */,
+			);
+			path = "src-widget";
+			sourceTree = "<group>";
+		};
+		I0000040000000000000001 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0000001000000000000001 /* PosturePalPro.app */,
+				F0000002000000000000001 /* PosturePal Watch.app */,
+				F0000003000000000000001 /* PosturePalWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		I0000050000000000000001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0000001000000000000001 /* WidgetKit.framework */,
+				C0000002000000000000001 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0000001000000000000001 /* PosturePalPro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = J0000001000000000000001 /* Build configuration list for PBXNativeTarget "PosturePalPro" */;
+			buildPhases = (
+				K0000001000000000000001 /* Sources */,
+				H0000001000000000000001 /* Frameworks */,
+				L0000001000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				M0000001000000000000001 /* PBXTargetDependency */,
+				M0000002000000000000001 /* PBXTargetDependency */,
+			);
+			name = PosturePalPro;
+			productName = PosturePalPro;
+			productReference = F0000001000000000000001 /* PosturePalPro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0000002000000000000001 /* PosturePal Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = J0000002000000000000001 /* Build configuration list for PBXNativeTarget "PosturePal Watch" */;
+			buildPhases = (
+				K0000002000000000000001 /* Sources */,
+				H0000002000000000000001 /* Frameworks */,
+				L0000002000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PosturePal Watch";
+			productName = "PosturePal Watch";
+			productReference = F0000002000000000000001 /* PosturePal Watch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0000003000000000000001 /* PosturePalWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = J0000003000000000000001 /* Build configuration list for PBXNativeTarget "PosturePalWidget" */;
+			buildPhases = (
+				K0000003000000000000001 /* Sources */,
+				H0000003000000000000001 /* Frameworks */,
+				L0000003000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PosturePalWidget;
+			productName = PosturePalWidget;
+			productReference = F0000003000000000000001 /* PosturePalWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0000001000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F0000001000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					F0000002000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					F0000003000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = J0000004000000000000001 /* Build configuration list for PBXProject "PosturePalPro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = I0000001000000000000001;
+			productRefGroup = I0000040000000000000001 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0000001000000000000001 /* PosturePalPro */,
+				F0000002000000000000001 /* PosturePal Watch */,
+				F0000003000000000000001 /* PosturePalWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		L0000001000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		L0000002000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		L0000003000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		K0000001000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000001000000000000001 /* PosturePalApp.swift in Sources */,
+				A0000002000000000000001 /* Achievement.swift in Sources */,
+				A0000003000000000000001 /* AnalyticsData.swift in Sources */,
+				A0000004000000000000001 /* CheckIn.swift in Sources */,
+				A0000005000000000000001 /* StreakData.swift in Sources */,
+				A0000006000000000000001 /* UserSettings.swift in Sources */,
+				A0000007000000000000001 /* NotificationService.swift in Sources */,
+				A0000008000000000000001 /* PersistenceController.swift in Sources */,
+				A0000009000000000000001 /* PhoneConnectivityManager.swift in Sources */,
+				A0000010000000000000001 /* SubscriptionManager.swift in Sources */,
+				A0000011000000000000001 /* AccessibilityHelpers.swift in Sources */,
+				A0000012000000000000001 /* AnalyticsViewModel.swift in Sources */,
+				A0000013000000000000001 /* DashboardViewModel.swift in Sources */,
+				A0000014000000000000001 /* SettingsViewModel.swift in Sources */,
+				A0000015000000000000001 /* AchievementsView.swift in Sources */,
+				A0000016000000000000001 /* AnalyticsDashboardView.swift in Sources */,
+				A0000017000000000000001 /* ConfettiView.swift in Sources */,
+				A0000018000000000000001 /* DashboardView.swift in Sources */,
+				A0000019000000000000001 /* EnhancedOnboardingView.swift in Sources */,
+				A0000020000000000000001 /* OnboardingContainerView.swift in Sources */,
+				A0000021000000000000001 /* PaywallView.swift in Sources */,
+				A0000022000000000000001 /* EnhancedSettingsView.swift in Sources */,
+				A0000023000000000000001 /* SettingsView.swift in Sources */,
+				A0000024000000000000001 /* LocalizationKeys.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		K0000002000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000101000000000000001 /* PosturePalWatchApp.swift in Sources */,
+				A0000102000000000000001 /* WatchConnectivityManager.swift in Sources */,
+				A0000103000000000000001 /* WatchDashboardViewModel.swift in Sources */,
+				A0000104000000000000001 /* WatchDashboardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		K0000003000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0000201000000000000001 /* PosturePalWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		M0000001000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0000002000000000000001 /* PosturePal Watch */;
+			targetProxy = D0000001000000000000001 /* PBXContainerItemProxy */;
+		};
+		M0000002000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0000003000000000000001 /* PosturePalWidget */;
+			targetProxy = D0000002000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		N0000001000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		N0000002000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		N0000003000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalPro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PosturePalPro;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		N0000004000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalPro.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PosturePalPro;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		N0000005000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Watch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PosturePal Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		N0000006000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PosturePalWatch.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Watch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PosturePal Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		N0000007000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Widget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PosturePalWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		N0000008000000000000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Widget-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = PosturePalWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.posturepal.app.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		J0000001000000000000001 /* Build configuration list for PBXNativeTarget "PosturePalPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N0000003000000000000001 /* Debug */,
+				N0000004000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		J0000002000000000000001 /* Build configuration list for PBXNativeTarget "PosturePal Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N0000005000000000000001 /* Debug */,
+				N0000006000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		J0000003000000000000001 /* Build configuration list for PBXNativeTarget "PosturePalWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N0000007000000000000001 /* Debug */,
+				N0000008000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		J0000004000000000000001 /* Build configuration list for PBXProject "PosturePalPro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				N0000001000000000000001 /* Debug */,
+				N0000002000000000000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0000001000000000000001 /* Project object */;
+}

@@ -1,5 +1,6 @@
 # Xcode
-*.xcodeproj
+# Note: We NEED .xcodeproj for GitHub Actions builds
+# *.xcodeproj  <-- Commented out - we need this!
 *.xcworkspace
 !*.xcworkspace/contents.xcworkspacedata
 !*.xcworkspace/xcshareddata/
